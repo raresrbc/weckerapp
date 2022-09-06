@@ -17,8 +17,8 @@
         app:menu="@menu/bottom_menu"
         />
   <TextView
-      android:layout_width=""
-      android:layout_height=""
+      android:layout_width="33dp"
+      android:layout_height="22dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent" />
