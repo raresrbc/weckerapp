@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/firstFragment"
+        android:title="Alarm"
+        android:icon="@drawable/ic_baseline_access_alarm_24" />
+
+    <item
+        android:id="@+id/secondFragment"
+        android:title="Kalender"
+        android:icon="@drawable/ic_baseline_calendar_today_24" />
+
+    <item
+        android:id="@+id/thirdFragment"
+        android:title="Wetter"
+        android:icon="@drawable/ic_baseline_wb" />
+
+    <item
+        android:id="@+id/fourthFragment"
+        android:title="Settings"
+        android:icon="@drawable/ic_baseline_settings_24" />
+
+</menu>
