@@ -15,7 +15,10 @@ public class MainActivity extends AppCompatActivity implements OnCreate {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//dfjjdsjjfdsjasjfdj
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
+        NavController navController = navHostFragment.getNavController();
+        NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
 
     }
