@@ -1,5 +1,6 @@
 package com.example.wecker;
-
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,14 +47,29 @@ public class FirstFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
+    public Button button;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        button = (Button) button.findViewById(R.id.addClock);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSetAlarm();
+            }
+        });
+
+    }
+    public void openSetAlarm(){
+        Intent intent = new Intent(getActivity(), SetAlarm.class);
+        startActivity(intent);
+
     }
 
     @Override
@@ -61,7 +78,6 @@ public class FirstFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_first, container, false);
     }
-
 
 
 }

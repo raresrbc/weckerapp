@@ -14,8 +14,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button button;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -29,19 +27,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = navHostFragment.getNavController();
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
-        button = (Button) findViewById(R.id.addClock);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSetAlarm();
-            }
-        });
-
-    }
-
-    public void openSetAlarm(){
-        Intent intent = new Intent(this, SetAlarm.class);
-        startActivity(intent);
 
     }
 
