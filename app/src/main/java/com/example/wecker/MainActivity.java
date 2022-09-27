@@ -10,6 +10,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.widget.TimePicker;
+import android.widget.Toast;
+import android.widget.ToggleButton;
+
+import java.util.Calendar;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setItemIconTintList(null);
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
@@ -29,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 
 
 }
